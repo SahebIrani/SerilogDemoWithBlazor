@@ -1,0 +1,31 @@
+{
+    "Serilog": {
+        "WriteTo": [
+            {
+                "Name": "Async",
+                "Args": {
+                    "configure": [
+                        {
+                            "Name": "Console"
+                        },
+                        {
+                            "Name": "Debug"
+                        },
+                        {
+                            "Name": "DiagnosticTrace"
+                        },
+                        {
+                            "Name": "File",
+                            "Args": {
+                                "path": "/home/log/api-log-.txt",
+                                "rollingInterval": "Day",
+                                "retainedFileCountLimit": 7,
+                                "buffered": true
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+﻿https://nblumhardt.com/2019/11/serilog-blazor/
+https://nblumhardt.com/2019/10/serilog-mvc-logging/
+https://nblumhardt.com/2019/10/serilog-in-aspnetcore-3/
+
+
+https://datalust.co/download
+
+https://hub.docker.com/r/datalust/seq
+
+This will start Seq with ephemeral storage, listening at http://localhost:5341. Windows users can alternatively grab the Seq MSI and install an instance with that.
+docker run --rm -it -e ACCEPT_EULA=Y -p 5341:80 datalust/seq
+
+Run a Seq instance with ephemeral storage and all services on port 5341:
+Run a Seq instance with stable storage mounted on the host to /path/to/seq/data, the UI mapped on the host to localhost:80, and localhost:5341 mapped to allow ingestion only:
+docker run -e ACCEPT_EULA=Y -p 5341:80 datalust/seq:latest
+
+docker run \
+  -e ACCEPT_EULA=Y \
+  -v /path/to/seq/data:/data \
+  -p 80:80 \
+  -p 5341:5341 \
+  datalust/seq:latest
+
+

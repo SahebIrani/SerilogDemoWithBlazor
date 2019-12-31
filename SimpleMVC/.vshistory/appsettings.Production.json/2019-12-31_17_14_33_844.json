@@ -1,0 +1,50 @@
+{
+    //"Serilog": {
+    //    "MinimumLevel": {
+    //        "Default": "Information"
+    //    },
+    //    "WriteTo": [
+    //        {
+    //            "Name": "Async",
+    //            "Args": {
+    //                "configure": [
+    //                    {
+    //                        "Name": "ApplicationInsights",
+    //                        "Args": {
+    //                            "restrictedToMinimumLevel": "Information",
+    //                            "telemetryConverter": "Serilog.Sinks.ApplicationInsights.Sinks.ApplicationInsights.TelemetryConverters.TraceTelemetryConverter, Serilog.Sinks.ApplicationInsights"
+    //                        }
+    //                    },
+    //                    {
+    //                        "Name": "Email",
+    //                        "Args": {
+    //                            "EmailConnectionInfo": {
+    //                                "EmailSubject": "PRODUCTION error logs",
+    //                                "FromEmail": "xxxxxxx",
+    //                                "ToEmail": "xxxxxxx",
+    //                                "MailServer": "xxxx",
+    //                                "NetworkCredentials": {
+    //                                    "username": "xxxxxx",
+    //                                    "password": "xxxxxx",
+    //                                    "domain": "xxxxx"
+    //                                },
+    //                                "Port": 25
+    //                            },
+    //                            "restrictedToMinimumLevel": "Error"
+    //                        }
+    //                    },
+    //                    {
+    //                        "Name": "File",
+    //                        "Args": {
+    //                            "path": "Logs\\sampleapp\\log-{Date}.txt",
+    //                            "rollingInterval": "Day",
+    //                            "retainedFileCountLimit": 13,
+    //                            "buffered": true
+    //                        }
+    //                    }
+    //                ]
+    //            }
+    //        }
+    //    ]
+    //}
+}

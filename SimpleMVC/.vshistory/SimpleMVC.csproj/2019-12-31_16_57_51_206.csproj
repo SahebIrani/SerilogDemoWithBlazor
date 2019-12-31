@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <WarningsAsErrors>NU1605</WarningsAsErrors>
+      <NoWarn>1701;1702;1031</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+        <PackageReference Include="Autofac.Analysis" Version="1.0.0-dev-00007" />
+        <PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0-dev-00148" />
+        <PackageReference Include="Serilog.Sinks.Loggly" Version="5.0.0-dev-00067" />
+        <PackageReference Include="Serilog.Sinks.Async" Version="1.4.1-dev-00071" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="logs\" />
+    </ItemGroup>
+
+</Project>

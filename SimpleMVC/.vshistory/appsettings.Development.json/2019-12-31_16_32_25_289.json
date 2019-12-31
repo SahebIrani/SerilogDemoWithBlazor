@@ -1,0 +1,31 @@
+{
+    "Serilog": {
+        "WriteTo": [
+            {
+                "Name": "Async",
+                "Args": {
+                    "configure": [
+                        {
+                            "Name": "Console"
+                        },
+                        {
+                            "Name": "Debug"
+                        },
+                        {
+                            "Name": "DiagnosticTrace"
+                        },
+                        {
+                            "Name": "File",
+                            "Args": {
+                                "path": "%LogDir%\\SimpleMVC\\log-.txt",
+                                "rollingInterval": "Day",
+                                "retainedFileCountLimit": 8,
+                                "buffered": true
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

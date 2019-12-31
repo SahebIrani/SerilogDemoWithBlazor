@@ -1,0 +1,19 @@
+@page "/"
+@using Serilog
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code{
+    object user = new { Name = "SinjulMSBH", Id = 26 };
+
+    override OnInitialized()
+    {
+        Log.Information("User {@User} logged in", user);
+
+        base.OnInitialized();
+    }
+}

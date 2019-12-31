@@ -1,0 +1,16 @@
+{
+    "Serilog": {
+        "Using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File", "Serilog.Sinks.Seq", "Serilog.Sinks.Debug" ],
+        "MinimumLevel": {
+            "Default": "Information",
+            "Override": {
+                "Microsoft": "Warning",
+                "System": "Warning"
+            }
+        }
+    },
+
+    "SEQ_URL": "http://localhost:5341",
+
+    "AllowedHosts": "*"
+}

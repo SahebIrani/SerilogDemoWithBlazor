@@ -1,0 +1,40 @@
+{
+    "Serilog": {
+        "Using": [
+            "Serilog.Sinks.Console",
+            "Serilog.Sinks.File",
+            "Serilog.Sinks.Seq",
+            "Serilog.Sinks.Debug"
+        ],
+        "MinimumLevel": {
+            "Default": "Information",
+            "Override": {
+                "Microsoft": "Warning",
+                "System": "Warning"
+            },
+            "Enrich": [ "FromLogContext", "WithMachineName", "WithThreadId" ],
+            "WriteTo": [
+                { "Name": "Console" },
+                { "Name": "Debug" },
+                { "Name": "DiagnosticTrace" },
+                {
+                    "Name": "File",
+                    "Args": {
+                        "path": "%LogDir%\\sampleapp\\log-{Date}.txt",
+                        "outputTemplate": "===> {Timestamp:HH:mm:ss.fff zzz} [{Level}] {Message}{NewLine}{Exception}",
+                        "rollingInterval": "Day",
+                        "retainedFileCountLimit": 8,
+                        "shared": true
+                    }
+                }
+            ]
+        },
+        "Properties": {
+            "Application": "SimpleMVC"
+        }
+    },
+
+    "SEQ_URL": "http://localhost:5341",
+
+    "AllowedHosts": "*"
+}
